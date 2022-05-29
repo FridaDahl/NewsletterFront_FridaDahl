@@ -44,7 +44,7 @@ function showCreate(){
 function login(){
     console.log("login");
 
-    fetch('http://localhost:3000/login', {
+    fetch('https://frida-dahl-newsletter.herokuapp.com/login', {
         method: 'POST',
         body:JSON.stringify({username:document.getElementById("loginUser").value.toLowerCase(), 
         pw:document.getElementById("loginPw").value}),
@@ -81,7 +81,7 @@ function login(){
 
 function changeSub(){
     console.log(localStorage.getItem("loggedInUserId"));
-    fetch('http://localhost:3000/users', {
+    fetch('https://frida-dahl-newsletter.herokuapp.com/users', {
         method: 'PUT',
         body:JSON.stringify({userId:localStorage.getItem("loggedInUserId"),
         subscribed:document.getElementById("sub").checked}),
@@ -109,7 +109,7 @@ function changeSub(){
 };
 
 function createNewUser(){
-    fetch('http://localhost:3000/newuser', {
+    fetch('https://frida-dahl-newsletter.herokuapp.com/newuser', {
         method: 'POST',
         body:JSON.stringify({username:document.getElementById("createUser").value.toLowerCase(),
         email:document.getElementById("createEmail").value, 
