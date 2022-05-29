@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Loginpage</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>    
+</head>
+<body>
+    <header>
+        <a id="login" class="menuLink menuLink--hidden" href="">Log in</a>
+        <a id="create" class="menuLink menuLink--hidden" href="">Create account</a>
+        <a id="logOut" class="menuLink menuLink--hidden" href="">Log Out</a>
+    </header>
+
+    <div id="loginForm" class="form form--hidden">
+        <h2>Log in</h2>
+        <input type="text" id="loginUser" autofocus placeholder="Username" required>
+        <input type="password" id="loginPw" placeholder="Password" required>
+        <button onclick="login()">Log in</button>
+    </div>
+
+    <div id="createForm" class="form form--hidden">
+        <h2>Create new account</h2>
+        <input type="text" id="createUser" autofocus placeholder="Username" required>
+        <input type="text" id="createEmail" placeholder="Email" required>
+        <input type="password" id="createPw" placeholder="Password" required>
+        <button onclick="createNewUser()">Create account</button>
+    </div>
+
+    <div id="newUserSuccess" class="form form--hidden">
+        <p>New user created!</p>
+    </div>
+    <div id="newUserFail" class="form form--hidden">
+        <p>Failed to create user</p>
+    </div>
+
+    <div id="loggedIn" class="loggedIn loggedIn--hidden">
+        <p id="subscribe" class="sub sub--hidden">Subscribe to newsletter</p>
+        <p id="unsubscribe" class="sub sub--hidden">Unsubscribe to newsletter</p>
+        <input type="checkbox" id="sub" onclick="changeSub()">
+    </div>
+</body>

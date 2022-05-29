@@ -1,0 +1,37 @@
+header{
+    background-color: black;
+    width: 100vw;
+    height: 50px;
+    position: relative;
+}
+
+
+.menuLink {
+    display: block;
+    color: white;
+    float: left;
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 10px;
+}
+
+#logOut{
+    float: right;
+    margin-right: 50px;
+}
+
+.menuLink--hidden {
+    display: none;
+}
+.form--hidden {
+    display: none;
+}
+
+.loggedIn--hidden {
+    display: none;
+}
+
+.sub--hidden{
+    display: none;
+}
